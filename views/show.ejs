@@ -1,0 +1,25 @@
+<%include ./partials/header %>
+<div id:'form' class="ui main text container segment">
+    <div class="ui huge header"><%=found.question%></div>
+    <div class="ui top attached">
+    <div class="item">
+    <img class="ui centered rounded image" src=<%=found.image%>>
+    <div class="content">
+    <form action="/polls/<%=found.id%>" method="POST">
+  <input type="radio" name="poll[ans]" value="a"><%=found.optiona%> <br>
+  <input type="radio" name="poll[ans]" value="b"><%=found.optionb%> <br>
+  <input type="radio" name="poll[ans]" value="c"><%=found.optionc%>"<br>
+  <input class='ui small black button' type="submit" value="Submit">
+</form>
+    <input class='votes' type='text' name='poll[a]' >
+    <input class='votes' type='text' name='poll[b]' >
+    <input class='votes' type='text' name='poll[c]'>
+   <form id='delete'  action="/polls/<%=found._id%>?_method=DELETE" method="POST">
+    <button class="ui red small basic button">Delete</button>
+    </form>
+    <a href="/polls/<%=found.id%>/edit" class="ui black small basic button">Edit</button>
+    </div>
+    </div>
+   
+</div>
+<%include ./partials/footer %>

@@ -1,0 +1,27 @@
+<%include ./partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit <%=poll.question%> Post</div>
+    <form class="ui form" action="/polls/<%=poll._id%>?_method=PUT" method="POST">
+       <div class="field">
+            <label>Question</label>
+             <input type="text" placeholder="Enter your question here" name="poll[question]" value="<%=poll.question%>">
+        </div>
+         <div class="field">
+            <label>Image link(optional)</label>
+             <input type="text" placeholder="Enter an image link here" name="poll[image]" value="<%=poll.image%>">
+        </div>
+         <div class="field">
+            <label>Author's name(optional)</label>
+            <input type="text" placeholder="Enter your name here" name="poll[author]" value="<%=poll.author%>">
+             
+        </div>
+         <div class="field">
+            <label>Options</label>
+            <input type="text" placeholder="Option A" name="poll[optiona]" value="<%=poll.optiona%>">
+            <input type="text" placeholder="Option B" name="poll[optionb]" value="<%=poll.optionb%>">
+            <input type="text" placeholder="Option C(optional)" name="poll[optionc]" value="<%=poll.optionc%>">
+        </div>
+         <input class="ui black basic button big" type="submit">
+    </form>
+</div>
+<%include ./partials/footer %>

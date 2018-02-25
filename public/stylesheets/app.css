@@ -1,0 +1,52 @@
+i.icon{
+font-size: 2em;
+}
+.container.main{
+    margin: 7em;
+}
+#delete{
+    display: inline;
+}
+.index{
+    width: 85%;
+}
+#edit{
+    margin-top: 50px;
+     display: inline-block;
+  vertical-align: middle;
+}
+
+#indexContainer{
+    width:100%; 
+}
+#landingText{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#232323;
+}
+#learn{
+     position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#232323;
+    
+}
+#about{
+margin:2em;
+color: #232323;
+background-color: white;
+}
+#new{
+    position: absolute;
+    left: 43%;
+    top: 122%
+}
+.foot{
+    float: left;
+}
+.votes{
+     visibility: hidden;
+}

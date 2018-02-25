@@ -1,0 +1,50 @@
+<%include ./partials/header %>
+<div id='indexContainer' class="ui main container">
+ 
+  
+ <div class="ui inverted vertical segment indexContainer">
+    <div class="ui page grid">
+        <div class="column">
+            <h1 class="ui title-header"></h1>
+            <div class="centered grid slogan">
+                <div class="column">
+                       <img class="ui fluid image" src="https://static.pexels.com/photos/515169/pexels-photo-515169.jpeg">
+                   <div id='landingText'  class="ui huge header centered">Quick Opinion: polls made easy!</div>
+                  
+                   <a id='learn' class="centered massive teal ui button" href='#about'>
+                     
+  Learn More
+</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<section id='about'>
+    <div class="ui huge header centered">Quick Opinion is a simple, modern and fast poll web app</div>
+    <br>
+   
+</section>
+<div class="ui grid ">
+  <div class="four wide column"></div>
+  <div class="eight wide column ui raised segment "><div ui container centered>
+    <%polls.forEach(function(poll){%>
+        <h2>poll.question</h2>
+        <img class='ui image fluid' src="<%=poll.image%>">
+        <p><%=poll.optiona%></p>
+        <p><%=poll.optionb%></p>
+        <p><%=poll.optionc%></p>
+        <p><%=poll.created.toDateString()%></p>
+        <p><%=poll.author%></p>
+        <a href="/polls/<%=poll.id%>" class='ui black basic button'>Answer</a>
+    <% }) %>
+</div></div>
+  <div class="four wide column"></div>
+
+
+ <a id='new' class="centered huge grey ui button" href='/polls/new'>Create a new poll</a>
+
+</div>
+<%include ./partials/footer %>
